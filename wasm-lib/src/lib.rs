@@ -1,5 +1,5 @@
 // lib.rs
-
+#[wasm_bindgen]
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -7,4 +7,9 @@ pub fn add(a: i32, b: i32) -> i32 {
 #[test]
 pub fn add_test() {
     assert_eq!(1 + 1, add(1, 1));
+}
+
+#[wasm_bindgen]
+extern {
+    pub fn alert(s: &str);
 }

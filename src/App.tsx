@@ -5,11 +5,15 @@ import './App.css';
 
 function App() {
   const [ans, setAns] = useState(0);
+  // useEffect(() => {
+  //   init().then(() => {
+  //     setAns(add(1, 1));
+  //   })
+  // }, [])
+
   useEffect(() => {
-    init().then(() => {
-      setAns(add(1, 1));
-    })
-  }, [])
+    add(2, 2) 
+  })
   return (
     <div className="App">
         <p>1 + 1 = {ans}</p>
